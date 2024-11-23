@@ -20,14 +20,16 @@ const showImages = () => {
 showImages()
 
 
-const prev = document.querySelector('button.prev')
-const next = document.querySelector('button.next')
+const prev = document.querySelector('button#prev')
+const next = document.querySelector('button#next')
 
-
-prev.addEventListener('click', () => currentImage - 1)
+prev.addEventListener('click', () => {
+    currentImage - 1
+})
 showImages()
 
-
-next.addEventListener('click', () => currentImage + 1)
+next.addEventListener('click', () => console.log('Clicked!'))
 showImages()
+
+//currentImage + 1
 
