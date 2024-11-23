@@ -19,17 +19,23 @@ const showImages = () => {
 
 showImages()
 
-
 const prev = document.querySelector('button#prev')
 const next = document.querySelector('button#next')
 
 prev.addEventListener('click', () => {
-    currentImage - 1
+    currentImage--
+    showImages()
 })
-showImages()
 
-next.addEventListener('click', () => console.log('Clicked!'))
-showImages()
+next.addEventListener('click', () => {
+    currentImage++
+    showImages()
+})
 
-//currentImage + 1
+setInterval(() => {
+    // code to run EVERY 5 seconds
+    currentImage++
+    showImages()
+}, 5000)
+
 
